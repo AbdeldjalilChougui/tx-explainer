@@ -1,0 +1,71 @@
+{
+  "name": "tx-explainer",
+  "version": "0.1.0",
+  "description": "Decode Solana transactions into plain language (System, SPL Token/Token-2022, ATA, Compute Budget, Memo, Anchor via IDL)",
+  "license": "MIT",
+  "author": "Abdeldjalil Chougui",
+  "homepage": "https://github.com/AbdeldjalilChougui/tx-explainer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdeldjalilChougui/tx-explainer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbdeldjalilChougui/tx-explainer/issues"
+  },
+  "keywords": [
+    "solana",
+    "transaction",
+    "decoder",
+    "explain",
+    "spl-token",
+    "token-2022",
+    "anchor",
+    "idl",
+    "cli"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "tx-explainer": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "!dist/web.*",
+    "web/index.html",
+    "web/app.js"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "pnpm run clean && tsc -p tsconfig.json && node scripts/build-web.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "fixtures": "node scripts/make-fixtures.mjs",
+    "prepack": "pnpm run build"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.8.0",
+    "bs58": "^6.0.0"
+  },
+  "devDependencies": {
+    "@solana/web3.js": "^1.99.0",
+    "@types/node": "^22.20.5",
+    "esbuild": "~0.25.12",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

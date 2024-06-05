@@ -1,0 +1,7 @@
+node_modules/
+dist/
+web/app.js
+*.log
+.env
+*-keypair.json
+id.json
