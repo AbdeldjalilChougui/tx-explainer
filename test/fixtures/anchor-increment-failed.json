@@ -1,0 +1,37 @@
+{
+  "slot": 300000004,
+  "blockTime": 1760000300,
+  "version": "legacy",
+  "transaction": [
+    "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEDAQgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSa9MgvhYXyqXwDudMPH3LrztxhgA1JSZhmYq32pCSqRoQXhcyyP5KXu47F39rlZg1YVAinQLBRQEOmshrfUHBkr4zLa+S+r7Oi2P/ekQAXl/f2a+hWHVrYcWpX5BLO40IEBAgIAARALEmgJaK47IQUAAAAAAAAA",
+    "base64"
+  ],
+  "meta": {
+    "err": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6000
+        }
+      ]
+    },
+    "fee": 5000,
+    "preBalances": [
+      100000000,
+      1238880,
+      1
+    ],
+    "postBalances": [
+      99995000,
+      1238880,
+      1
+    ],
+    "preTokenBalances": [],
+    "postTokenBalances": [],
+    "innerInstructions": [],
+    "logMessages": [
+      "Program log: AnchorError occurred. Error Code: Overflow. Error Number: 6000."
+    ],
+    "computeUnitsConsumed": 3210
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "slot": 300000001,
+  "blockTime": 1760000000,
+  "version": "legacy",
+  "transaction": [
+    "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMFAQgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSYCDxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLQMGRm/lIRcy/+ytunLDm+e8jOW7xfcSayxDmzpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFSlNamSkhBk0k6HFg2jh8fDW13bySu4HkH6hAQQVEjeMy2vkvq+zotj/3pEAF5f39mvoVh1a2HFqV+QSzuNCBBAIABQLoAwAAAgAJA1DDAAAAAAAAAwIAAQwCAAAAgLLmDgAAAAAEAQAQcmVudCBmb3IgT2N0b2Jlcg==",
+    "base64"
+  ],
+  "meta": {
+    "err": null,
+    "fee": 5050,
+    "preBalances": [
+      2000000000,
+      0,
+      1,
+      1,
+      1
+    ],
+    "postBalances": [
+      1749994950,
+      250000000,
+      1,
+      1,
+      1
+    ],
+    "preTokenBalances": [],
+    "postTokenBalances": [],
+    "innerInstructions": [],
+    "logMessages": [],
+    "computeUnitsConsumed": 750
+  }
+}
