@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Ccircle cx=%278%27 cy=%278%27 r=%277%27 fill=%27%235b3cc4%27/%3E%3C/svg%3E">
+<title>tx-explainer</title>
+<style>
+  :root { --bg:#fafafa; --fg:#1b1b1b; --muted:#666; --card:#fff; --border:#ddd; --accent:#5b3cc4; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#141414; --fg:#eee; --muted:#999; --card:#1d1d1d; --border:#333; --accent:#a68bff; } }
+  body { margin:0; font:15px/1.5 system-ui, sans-serif; background:var(--bg); color:var(--fg); }
+  main { max-width:900px; margin:0 auto; padding:24px 16px; }
+  h1 { font-size:1.4rem; margin:0 0 4px; }
+  p.warn { color:var(--muted); margin:0 0 16px; }
+  textarea, select, button { font:inherit; color:inherit; background:var(--card); border:1px solid var(--border); border-radius:6px; padding:8px; }
+  textarea { width:100%; box-sizing:border-box; font-family:ui-monospace, monospace; font-size:13px; }
+  .row { display:flex; gap:8px; margin:8px 0; flex-wrap:wrap; }
+  button { background:var(--accent); color:#fff; border:none; cursor:pointer; padding:8px 18px; }
+  pre { background:var(--card); border:1px solid var(--border); border-radius:6px; padding:12px; overflow-x:auto; white-space:pre-wrap; font-size:13px; }
+  details { margin:8px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>tx-explainer</h1>
+  <p class="warn">Paste a transaction signature (fetched from the selected cluster) or a raw base64/base58 transaction. Read-only. Not audited.</p>
+  <textarea id="input" rows="4" placeholder="signature, or base64/base58 transaction bytes"></textarea>
+  <div class="row">
+    <select id="cluster"><option>devnet</option><option>testnet</option><option>localnet</option><option>mainnet</option></select>
+    <button id="go">Explain</button>
+  </div>
+  <details><summary>Anchor IDL (optional)</summary><textarea id="idl" rows="6" placeholder="paste an Anchor 0.30+ IDL JSON"></textarea></details>
+  <pre id="out"></pre>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
